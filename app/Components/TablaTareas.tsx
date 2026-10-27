@@ -1,9 +1,8 @@
 import React from 'react'
 import {listaTareas} from '../Models/ListaTareas'
-import { Tarea } from '../Models/Tarea'
 import  BotonEliminar from './BotonEliminar'
 
-export default function TablaTareas(lista: listaTareas) {
+export default function TablaTareas({lista}: listaTareas) {
   return (
     <div>
           <table className='table'>
@@ -16,7 +15,7 @@ export default function TablaTareas(lista: listaTareas) {
               </thead>
               <tbody>
                   {
-                      lista.map((tarea: Tarea) => (
+                      lista.map((tarea) => (
                           <tr key={tarea.id}>
                               <td>{tarea.id}</td>
                               <td>{tarea.titulo}</td>
